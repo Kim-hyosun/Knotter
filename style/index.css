@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+html, body {font-family: "PAYW-Pro", 돋움, sans-serif;}
+.eng {font-family: 'EuclidCircularA', sans-serif;}
+a{display: block; color:inherit; text-decoration: none;}
+img {display: block;}
+.wrap {overflow-x: hidden;}
+header .gnb {position: fixed; top: 5.46%; z-index: 99;}
+header h1 .logo {width:150px; height:23px; left: 2.60%; text-indent: -9999px; background: url(../images/index_img/img_logo_white.svg) no-repeat 0 / contain;}
+header .menu_open{right: 2.60%;}
+
+main .art1{width: 100%; height: 100vh; background: url(../images/index_img/img_main_intro.jpg) no-repeat 50% / cover; position:relative;}
+main .art1 .txt {width: 69.21%; position: absolute; top:50%; left:50%; transform: translate(-50%, -50%);}
+main .art1 .txt p {margin-top: 1rem; text-align: right; font-size: 1.5rem; font-weight: 400; letter-spacing: -0.02em; line-height: 1.4; color: #a5a5a5;}
+
+main .art2 {width:100%; height:100vh; position: relative; overflow: hidden;}
+main .art2 .frame {display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;}
+
+main .art {width: 100%; height:100vh; display: flex; background-color: #000; align-items: center;}
+main .art .img {width: 56.77%; height: 52.40%; background: url(../images/index_img/img_bg_bentley.png) no-repeat 50%/cover;     
+    /*transition: width .3s,height .3s opacity .2s; */ display: flex; flex-direction: column; align-items: center; justify-content: center;
+gap: 0.25rem 0;} 
+
+/* 스크롤할때 보였다가 안보이는 글씨 */
+main .art .img h4{font-size: 7.5rem; font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; color: rgba(255,255,255,.72);white-space: nowrap;}
+main .art .img p{font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.0625; color: rgba(255,255,255,.72);}
+
+main .art .txt {width: 43.22%; height: 52.40%; display: flex; flex-direction: column; justify-content: space-between;} 
+main .art .txt .txt_box{padding: 0 0 0 5.75rem;}
+main .art .txt .txt_box h6{font-size: 3rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.05; color: #fff; white-space: nowrap;}
+main .art .txt .txt_box span{font-size: 1.125rem; font-weight: 400; letter-spacing: -0.02em; line-height: 1.26; color: #6f6f6f;white-space: nowrap;}
+main .art .txt .txt_box p{font-size: 1.125rem; font-weight: 500; letter-spacing: -0.02em; line-height: 1.6; color: #fff; margin-top: 2.1875rem; white-space: nowrap;}
+main .art .txt .img_box{display: flex; padding: 0 0.5rem; gap: 0 0.5rem; justify-content: space-between;}
+
+address {width: 100%; height:100vh; position: relative; padding-top: 12.08%;}
+address video {position: absolute; top: 0; left: 0; width: 100%; height: 100vh; object-fit: cover;}
+address ul {padding: 0 2.60% 2.60% 2.60%;}
+address ul li {position:absolute; z-index: 99; font-size: 1.75rem; font-weight: 600; font-style:normal; letter-spacing: -0.02em; line-height: 1.4; color: #292929;}
+address ul .txt2 {margin-top: 7rem;}
+address ul .txt3 {margin-top: 16.5rem;}
+
+.page_count {position: fixed; display: flex; flex-direction: column; align-items: center; gap: 0.75rem 0; bottom: 3.125rem; right: 3.125rem; font-size: 1.25rem; font-weight: 600; letter-spacing: -0.02em; line-height: 1.4; z-index: 99; color:#fff;}
+.page_count svg path {fill:#fff;} 
+.page_count svg rect {fill:#fff;}
+
+footer {position: fixed; bottom: 0; left: 0; width: 100%; padding: 0 3.125rem 3.125rem; z-index: 99;}
+footer .txt {position: relative; width: fit-content;}
+footer .family_site {display: flex; margin-bottom: 0.75rem;}
+footer .family_site li {margin: 0 0.75rem; position:relative;}
+:is(footer .family_site) a, p, .contact_btn{color:#fff; font-size: .8rem; font-weight: 500; letter-spacing: -0.02em; line-height: 1.26;}
+footer .family_site li:nth-child(1) {margin-left:0;}
+:is(footer .family_site) li:nth-child(2)::after, li:nth-child(3)::after {content: "";
+display: inline-block; width: 1px; height: 0.5rem; background-color: rgba(255,255,255,.32); border-radius: 1px; position:absolute; top:50%; transform: translateY(-50%); left:-0.75rem;}
+footer .contact_btn {background: rgba(255,255,255,.08);position: absolute; top: 50%; transform: translateY(-50%); right: -6.8125rem; padding: 1.0625rem 1rem; border-radius: 0.25rem; line-height: 1;}
+
+.menu_page {width:100%; height:100vh; background-color: #050505; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 99;}
+.menu_page .logo_dark {width: 150px;height: 23px; position: fixed; top: 5.46%; left: 2.60%; z-index: 999; background: url(../images/index_img/img_logo_white.svg) no-repeat 0 /contain; text-indent: -9999px;}
+.menu_page .menu_close {position: absolute; top: 5.46%; right: 2.60%; background-color: #ddff21; padding: 0.375rem; text-align: center;}
+.menu_page .menu{position: absolute; top: 50%; transform: translateY(-50%); left: 16.14%;}
+.menu_page > .menu > li > a {font-size: 7.5rem; font-weight: 600; letter-spacing: -0.01em; line-height: 1.2916666667; color: #fff;}
+.menu_page > .menu > li > a:hover{color:#ddff21;}
+.menu_page > .menu > li:nth-child(3)::after {content:''; display: none;}
+
+.active {display: block;}
+.none {display: none;}
+
+/* 
+로딩화면 관련 css
+.cursor{position: fixed; width: 1.5rem; height: 1.5rem; pointer-events: none; z-index: 1000; top: 0; left: 0; cursor: none;} 
+.cursor.dark>span {background-color: #fff;}
+.cursor>span {display: block; width: 100%; height: 100%; border-radius: 100%; transition: transform .2s; background-color: #101010; transition: background-color .2s; animation: springDefault .2s forwards;}
+*/

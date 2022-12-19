@@ -1,0 +1,133 @@
+@charset "utf-8";
+                
+/* EuclidCircularA */
+
+@font-face {
+    font-family: "EuclidCircularA";
+    src: url("./font/EuclidCircularA-Light-WebS.woff2") format("woff2"),
+         url("./font/Euclid-Circular-A-Light.woff") format("woff");
+    font-weight: light;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "EuclidCircularA";
+    src: url("./font/EuclidCircularA-LightItalic-WebS.woff2") format("woff2"),
+    url("./font/Euclid-Circular-A-Light-Italic.woff") format("woff");
+    font-weight: light;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "EuclidCircularA";
+    src: url("./font/EuclidCircularA-Regular-WebS.woff2") format("woff2"),
+    url("./font/Euclid-Circular-A-Regular.woff") format("woff");
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "EuclidCircularA";
+    src: url("./font/EuclidCircularA-RegularItalic-WebS.woff2") format("woff2"),
+    url("./font/Euclid-Circular-A-Italic.woff") format("woff");
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "EuclidCircularA";
+    src: url("./font/EuclidCircularA-Medium-WebS.woff2") format("woff2"),
+    url("./font/Euclid-Circular-A-Medium.woff") format("woff");
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "EuclidCircularA";
+    src: url("./font/EuclidCircularA-MediumItalic-WebS.woff2") format("woff2"),
+    url("./font/Euclid-Circular-A-Medium-Italic.woff") format("woff");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "EuclidCircularA";
+    src: url("./font/EuclidCircularA-Semibold-WebS.woff2") format("woff2"),
+    url("./font/Euclid-Circular-A-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "EuclidCircularA";
+    src: url("./font/EuclidCircularA-SemiboldItalic-WebS.woff2") format("woff2"),
+    url("./font/Euclid-Circular-A-SemiBold-Italic.woff") format("woff");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "EuclidCircularA";
+    src: url("./font/EuclidCircularA-Bold-WebS.woff2") format("woff2"),
+    url("./font/Euclid-Circular-A-Bold.woff") format("woff");
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "EuclidCircularA";
+    src: url("./font/EuclidCircularA-BoldItalic-WebS.woff2") format("woff2"),
+    url("./font/Euclid-Circular-A-Bold-Italic.woff") format("woff");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+/* PAYW-Pro */
+@font-face {
+    font-family: "PAYW-Pro";
+    src: url("./font/PAYWPro-ExtraLight.woff2") format("woff2");
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PAYW-Pro";
+    src: url("./font/PAYWPro-Light.woff2") format("woff2");
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PAYW-Pro";
+    src: url("./font/PAYWPro-Thin.woff2") format("woff2");
+    font-weight: 300;
+    
+}
+
+@font-face {
+    font-family: "PAYW-Pro";
+    src: url("./font/PAYWPro-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PAYW-Pro";
+    src: url("./font/PAYWPro-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PAYW-Pro";
+    src: url("./font/PAYWPro-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-display: swap;
+}
+
