@@ -22,7 +22,8 @@ menuClose.addEventListener('click',()=>{
 let artObserver = new IntersectionObserver((entries) => {
   entries.forEach((e, idx) => {
     if (e.intersectionRatio > 0.6) {currentIdx.textContent = `0${idx+1}`; 
-    e.target.classList.add('active');}
+    // e.target.classList.add('active');
+  }
     // else if(e.intersectionRatio = 0.5){ e.target.classList.remove('active');}
     //        else if(e.intersectionRatio > 1.0){e.target.classList.remove('active');}
    })

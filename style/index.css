@@ -66,34 +66,19 @@ main .art1{width: 100%; height: 100vh; background: url(../images/index_img/img_m
 main .art1 .txt {width: 69.21%; position: absolute; top:50%; left:50%; transform: translate(-50%, -50%);}
 main .art1 .txt h6 {margin-top: 1rem; text-align: right; font-size: 1.5rem; font-weight: 400; letter-spacing: -0.02em; line-height: 1.4; color: #a5a5a5;}
 
-main .container {width: 100%; height:100vh; position: relative; }  
-/* main .art2 .sticky_box {position: sticky; top: 0;height: 100vh; }   */
-main .art2 .horizontal {position: absolute; top:0; width: 300%; height: 100vh;
-   display: flex;} 
-.swiper-slide {
-  text-align: center;
 
-  background: #fff;
+.container {  width: 100%;  position: relative;}
 
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
+.sticky_box {  position: sticky;  top: 0;  height: 100vh;}
 
-main .horizontal li { width: 100%; height: 100vh;  color: #101010; transform-origin: center; font-size: 2.8rem; font-weight: 600; letter-spacing: -0.02em; line-height: 1.5; text-align: center; transition: transform .5s;}
-/* main .art2 .horizontal li:nth-child(1).swipe {z-index: 99; transform: translateX(-1920px);}
-main .art2 .horizontal li:nth-child(2).swipe {z-index: 999; transform: translateX(-3840px); } */
-  
+.horizontal {  position: absolute;  display: flex;  width: 300%;}
+.horizontal li {  width: 100%;  height: 100vh;}
+
+/* 내부 글씨 세 개 */
+
+main .frame { /* width: 100%; */ box-sizing: border-box; padding: 380px 0; text-align: center; color: #101010; transform-origin: center; font-size: 2.8rem; font-weight: 600; letter-spacing: -0.02em; line-height: 1.5; text-align: center;}
+.container .art2 .txt1 {  font-size: 7.5em;  font-family: 'EuclidCircularA', sans-serif;  font-weight: bold;  color: #000;}
+
 /* @keyframes fadein {  
     0% {opacity: 0; transform: translateY(20px);}  
     100% {opacity: 1;transform: none;  }} */
@@ -107,7 +92,7 @@ main .art2 .horizontal li {width: 100%; height: 100vh; display: flex; align-item
 main .art2 .horizontal li p{color: #101010; transform-origin: center; font-size: 2.8rem; font-weight: 600; letter-spacing: -0.02em; line-height: 1.5; text-align: center; transition: transform .5s;} */
 
 
-main .art {width: 100%; height:100vh; display: flex; background-color: #000; align-items: center;}
+main .art {width: 100%; height:100vh; display: flex; background-color: #000; align-items: center; position:relative;}
 main .art .img {width: 56.77%; height: 52.40%; background: url(../images/index_img/img_bg_bentley.png) no-repeat 50%/cover;     
     /*transition: width .3s,height .3s opacity .2s; */ display: flex; flex-direction: column; align-items: center; justify-content: center;
 gap: 0.25rem 0;} 
@@ -117,9 +102,16 @@ main .art5 .img {background-image: url(../images/index_img/img_bg_aFragmentOfAst
 main .art6 .img {background-image: url(../images/index_img/img_bg_ekolon.png);}
 main .art7 .img {background-image: url(../images/index_img/img_bg_stylerpick.png);}
 
-/* 스크롤할때 보였다가 안보이는 글씨 */
-main .art .img h4{ font-size: 7.5rem; font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; color: rgba(255,255,255,.72);white-space: nowrap;}
-main .art .img p{font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.0625; color: rgba(255,255,255,.72);}
+main .art .artimg {width: 100vw; height:100vh; background: no-repeat 50%/cover; position:absolute; display: flex; justify-content: center; align-items: center; flex-direction: column; transition:.5s;}
+main .art3 .artimg {background-image: url(../images/index_img/img_bg_bentley.png);}
+main .art4 .artimg {background-image: url(../images/index_img/img_bg_firstTheOrigin.png);}
+main .art5 .artimg {background-image: url(../images/index_img/img_bg_aFragmentOfAstar.png);}
+main .art6 .artimg {background-image: url(../images/index_img/img_bg_ekolon.png);}
+main .art7 .artimg {background-image: url(../images/index_img/img_bg_stylerpick.png);}
+main .art.active .artimg {width:0; height:0;}
+
+main .art .artimg h4{ font-size: 7.5rem; font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; color: rgba(255,255,255,.72);white-space: nowrap;}
+main .art .artimg p{font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.0625; color: rgba(255,255,255,.72);}
 
 main .art .txt {width: 43.22%; height: 52.40%; display: flex; flex-direction: column; justify-content: space-between;} 
 main .art .txt .txt_box{padding: 0 0 0 5.75rem;}
@@ -171,10 +163,10 @@ footer p.dark {color:#101010;}
 .none {display: none;}
 .resize { width:100%; height:100%;}
 
-main .art.active .img {width:100%; height:100%;}
+/* main .art.active .img {width:100%; height:100%;}
 main .art.active h4 {display: block;}
 main .art.active p {display: block;}
-main .art.active .txt {width: 0; height: 0; overflow: hidden;}
+main .art.active .txt {width: 0; height: 0; overflow: hidden;} */
 
 main .art .img.detail {width: 56.77%; height: 52.40%;}
 main .art .img.detail h4 {display: none;}
