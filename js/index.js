@@ -106,7 +106,7 @@ document.body.style.cursor = 'none';
 
 //가로스크롤
 
-/* (function(){
+(function(){
 const container = document.querySelector('.container');
 const stickyBox = document.querySelector('.sticky_box');
 const horizontal = document.querySelector('.horizontal');
@@ -122,7 +122,7 @@ function scrolled() {
   horizontal.scrollTo({behavior:"smooth"})
 }
 }())
- */
+
 //스크롤 한번에 active제거 하고 detail추가하기
 
 /* 
