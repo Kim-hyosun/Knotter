@@ -148,7 +148,7 @@ function scrolled() {
 
 //스크롤 따라서 애니메이션 
 gsap.registerPlugin(ScrollTrigger);
-gsap.from("#slogan", {scrollTrigger : {trigger:"#textZoom", toggleActions: "restart none restart none"}, duration:1 ,y:100, scale: 1000} )
+gsap.from("#slogan", {scrollTrigger : {trigger:"#textZoom", toggleActions: "restart none reverse none"}, duration:1 ,y:100, scale: 1000} )
 gsap.to(".data-scroll1", {scrollTrigger : {trigger : ".data-scroll1", toggleActions: "restart none restart none"} ,duration:.5, width : 0, height : 0, textIndent : -9999 , delay : 1.5 });
 gsap.to(".data-scroll2", {scrollTrigger : {trigger : ".data-scroll2", toggleActions: "restart none restart none"} ,duration:.5, width : 0, height : 0, textIndent : -9999 , delay : 1.5 });
 gsap.to(".data-scroll3", {scrollTrigger : {trigger : ".data-scroll3", toggleActions: "restart none restart none"} ,duration:.5, width : 0, height : 0, textIndent : -9999 , delay : 1.5 });
