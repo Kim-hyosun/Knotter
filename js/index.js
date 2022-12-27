@@ -133,7 +133,7 @@ const stickyBox = document.querySelector('.sticky_box');
 const horizontal = document.querySelector('.horizontal');
 
 function calcHt(ht) {
-  return ht.scrollWidth - document.documentElement.clientWidth + document.documentElement.clientHeight + (document.documentElement.clientWidth / 100 * 10) - (document.documentElement.clientHeight);
+  return ht.scrollWidth - document.documentElement.clientWidth + document.documentElement.clientHeight + 200;
 }
 container.style.height = `${calcHt(horizontal)}px`;
 // console.log(container.getBoundingClientRect().top)
