@@ -92,9 +92,9 @@ main .frame { /* width: 100%; */ box-sizing: border-box; padding: 380px 0; text-
 main .art.active .artimg {animation-delay: 10s; animation: imgFade 1s 1 cubic-bezier(1,-0.06,1,.77); }
 main .art.active .artimg h4 {animation-delay: 10s; animation: txtFade 1s 1 cubic-bezier(1,-0.06,1,.77);}
 main .art.active .artimg p{animation-delay: 10s; animation: txtFade 1s 1 cubic-bezier(1,-0.06,1,.77); }*/
-main .art.active .artimg {width:0; height:0;}
-main .art.active .artimg h4{display: none;}
-main .art.active .artimg p{display: none;}
+
+/* main .art.active .artimg h4{font-size: 0;}
+main .art.active .artimg p{display: none;}  */
 
 
 
@@ -122,7 +122,7 @@ main .art4 .artimg {background-image: url(../images/index_img/img_bg_firstTheOri
 main .art5 .artimg {background-image: url(../images/index_img/img_bg_aFragmentOfAstar.png);}
 main .art6 .artimg {background-image: url(../images/index_img/img_bg_ekolon.png);}
 main .art7 .artimg {background-image: url(../images/index_img/img_bg_stylerpick.png);}
-main .art.active .artimg {width:0; height:0;}
+
 
 main .art .artimg h4{ font-size: 7.5rem; font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; color: rgba(255,255,255,.72);white-space: nowrap;}
 main .art .artimg p{font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.0625; color: rgba(255,255,255,.72);}

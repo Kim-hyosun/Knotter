@@ -21,8 +21,7 @@ menuClose.addEventListener('click',()=>{
   addEventListener('scroll',()=>{
 let artObserver = new IntersectionObserver((entries) => {
   entries.forEach((e, idx) => {
-    if (e.intersectionRatio > 0.6) {currentIdx.textContent = `0${idx+1}`; 
-  e.target.classList.add('active'); }
+    if (e.intersectionRatio > 0.6) {currentIdx.textContent = `0${idx+1}`;  }
    })
 })
  const art =document.querySelectorAll('article'); 
@@ -97,13 +96,13 @@ const pageCountSvg2_4 = document.querySelector('.page_count svg rect:nth-child(4
 }())
 
 //fade
-const txtFade = ()=> {
+/* const txtFade = ()=> {
   const container = document.querySelector('main .container');
 
 addEventListener('scroll',()=>{
   let svgObserver = new IntersectionObserver((ent) => {
     ent.forEach((e) => {
-      let sizeget = e.getBoundingClientRect().top;
+      let sizeget = e.getBoundingClientRect();
       let sizeost = e.offsetTop;
       let sizesct = e.scrollTop;
       console.log(sizeget)
@@ -119,7 +118,7 @@ addEventListener('scroll',()=>{
                        })
     svgObserver.observe(container);
   })
-}; 
+};  */
 
 
 // 마우스커서 안 보이게 
@@ -148,8 +147,18 @@ function scrolled() {
 }())
 
 //스크롤 따라서 애니메이션 
+gsap.registerPlugin(ScrollTrigger);
+gsap.from("#slogan", {scrollTrigger : {trigger:"#textZoom", toggleActions: "restart none restart none"}, duration:1 ,y:100, scale: 1000} )
+gsap.to(".data-scroll1", {scrollTrigger : {trigger : ".data-scroll1", toggleActions: "restart none restart none"} ,duration:.5, width : 0, height : 0, textIndent : -9999 , delay : 1.5 });
+gsap.to(".data-scroll2", {scrollTrigger : {trigger : ".data-scroll2", toggleActions: "restart none restart none"} ,duration:.5, width : 0, height : 0, textIndent : -9999 , delay : 1.5 });
+gsap.to(".data-scroll3", {scrollTrigger : {trigger : ".data-scroll3", toggleActions: "restart none restart none"} ,duration:.5, width : 0, height : 0, textIndent : -9999 , delay : 1.5 });
+gsap.to(".data-scroll4", {scrollTrigger : {trigger : ".data-scroll4", toggleActions: "restart none restart none"} ,duration:.5, width : 0, height : 0, textIndent : -9999 , delay : 1.5 });
+gsap.to(".data-scroll5", {scrollTrigger : {trigger : ".data-scroll5", toggleActions: "restart none restart none"} ,duration:.5, width : 0, height : 0, textIndent : -9999 , delay : 1.5 });
 
-
+/* ScrollTrigger.create({onEnterBack: ONBACK})
+function ONBACK (){
+  document.querySelector('.data-scroll1').style.width(`100%`);
+} */
 //스크롤 한번에 active제거 하고 detail추가하기
 
 /* 
