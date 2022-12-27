@@ -18,6 +18,7 @@ button:hover {
 }
 a {
     cursor: none;
+    text-decoration: none;
 }
 .test_obj {
     position: relative;
