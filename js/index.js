@@ -10,7 +10,7 @@ menuOpen.addEventListener('click',()=>{
 menuClose.addEventListener('click',()=>{
  menuPage.classList.remove('on');
  menuPage.classList.add('none');
-})
+})  
 })();
 
 
@@ -22,14 +22,11 @@ menuClose.addEventListener('click',()=>{
 let artObserver = new IntersectionObserver((entries) => {
   entries.forEach((e, idx) => {
     if (e.intersectionRatio > 0.6) {currentIdx.textContent = `0${idx+1}`; 
-    // e.target.classList.add('active');
-  }
-    // else if(e.intersectionRatio = 0.5){ e.target.classList.remove('active');}
-    //        else if(e.intersectionRatio > 1.0){e.target.classList.remove('active');}
+  e.target.classList.add('active'); }
    })
 })
  const art =document.querySelectorAll('article'); 
-art.forEach((el) => {artObserver.observe(el);})
+  art.forEach((el) => {artObserver.observe(el);})
 
 const logoDarken = document.querySelector('header .logo');
 const footerA1 =document.querySelector('footer .family_site li:nth-child(1) a');
@@ -64,6 +61,7 @@ const pageCountSvg2_4 = document.querySelector('.page_count svg rect:nth-child(4
       footerA3.classList.add('dark');
       footerP.classList.add('dark');
     } 
+
     else {footerContact.classList.remove('dark'); 
     currentIdx.style.color=`#fff`;
     logoDarken.style.backgroundImage =`url(./images/index_img/img_logo_white.svg)`;
@@ -84,23 +82,45 @@ const pageCountSvg2_4 = document.querySelector('.page_count svg rect:nth-child(4
    observer.observe(address);
   }) 
 
-  const li1 = document.querySelector('main .art2 .horizontal li:nth-child(1)');
-  const li2 = document.querySelector('main .art2 .horizontal li:nth-child(2)');
-  const art =document.querySelectorAll('article'); 
-
-  addEventListener('scroll',(event)=>{
-    if(event === art[1]){
+  /* const art2 = document.querySelector('main .art:nth-child(2)');
+  const logoDarken = document.querySelector('header .logo');
+  addEventListener('scroll',()=>{
+ 
     let Observer = new IntersectionObserver((el) => {
-      el.forEach((e) => {
-        if (isIntersecting) {e.classList.add('swipe');}
-        else {e.classList.remove('swipe')}
-       })
-    }) 
-    Observer.observe(li1);
-    Observer.observe(li2);
-  }
-  })
+      el.forEach(entry => {
+        if (entry.isIntersecting) { logoDarken.style.backgroundImage =`url(./images/index_img/img_logo_black.svg)`;}
+        else {logoDarken.style.backgroundImage =`url(./images/index_img/img_logo_white.svg)`;}
+      })
+       }) 
+    Observer.observe(art2);
+  })  */
 }())
+
+//fade
+const txtFade = ()=> {
+  const container = document.querySelector('main .container');
+
+addEventListener('scroll',()=>{
+  let svgObserver = new IntersectionObserver((ent) => {
+    ent.forEach((e) => {
+      let sizeget = e.getBoundingClientRect().top;
+      let sizeost = e.offsetTop;
+      let sizesct = e.scrollTop;
+      console.log(sizeget)
+      console.log(sizeost)
+      console.log(sizesct)
+                             if (size[key] === 0) {
+                              container.classList.add('visible');
+                             }
+                            else {
+                              container.classList.remove('visible');
+                            }
+                         })
+                       })
+    svgObserver.observe(container);
+  })
+}; 
+
 
 // 마우스커서 안 보이게 
 document.body.style.cursor = 'none';
@@ -113,9 +133,11 @@ const stickyBox = document.querySelector('.sticky_box');
 const horizontal = document.querySelector('.horizontal');
 
 function calcHt(ht) {
-  return ht.scrollWidth - document.documentElement.clientWidth + document.documentElement.clientHeight + (document.documentElement.clientWidth / 100 * 4);
+  return ht.scrollWidth - document.documentElement.clientWidth + document.documentElement.clientHeight + (document.documentElement.clientWidth / 100 * 10) - (document.documentElement.clientHeight);
 }
 container.style.height = `${calcHt(horizontal)}px`;
+// console.log(container.getBoundingClientRect().top)
+//console.log(container.scrollHeight)// 4457 (더하기 안하면 4061)
 
 addEventListener('scroll', scrolled);
 function scrolled() {
@@ -123,6 +145,9 @@ function scrolled() {
   horizontal.scrollTo({behavior:"smooth"})
 }
 }())
+
+//스크롤 따라서 애니메이션 
+
 
 //스크롤 한번에 active제거 하고 detail추가하기
 

@@ -67,10 +67,8 @@ main .art1 .txt {width: 69.21%; position: absolute; top:50%; left:50%; transform
 main .art1 .txt h6 {margin-top: 1rem; text-align: right; font-size: 1.5rem; font-weight: 400; letter-spacing: -0.02em; line-height: 1.4; color: #a5a5a5;}
 
 
-.container {  width: 100%;  position: relative;}
-
+.container {  width: 100%;  position: relative; }
 .sticky_box {  position: sticky;  top: 0;  height: 100vh;}
-
 .horizontal {  position: absolute;  display: flex;  width: 300%;}
 .horizontal li {  width: 100%;  height: 100vh;}
 
@@ -79,10 +77,22 @@ main .art1 .txt h6 {margin-top: 1rem; text-align: right; font-size: 1.5rem; font
 main .frame { /* width: 100%; */ box-sizing: border-box; padding: 380px 0; text-align: center; color: #101010; transform-origin: center; font-size: 2.8rem; font-weight: 600; letter-spacing: -0.02em; line-height: 1.5; text-align: center;}
 .container .art2 .txt1 {  font-size: 7.5em;  font-family: 'EuclidCircularA', sans-serif;  font-weight: bold;  color: #000;}
 
-/* @keyframes fadein {  
-    0% {opacity: 0; transform: translateY(20px);}  
-    100% {opacity: 1;transform: none;  }} */
-  
+  @keyframes svgFade {
+    0% {transform: scale(10) translateY(100px);}
+    50% {transform: scale(5) translateY(50px);}
+    100% {transform: scale(1) translateY(0);}
+  }
+  main .container .art2 .txt1 svg {animation: svgFade 4s 1;}
+
+@keyframes imgFade {
+
+  0%{width:100%; height:100vh;}
+  100%{width:0; height:0;}
+}
+  main .art.active .artimg {animation-delay: 5s; animation: imgFade 4s 1 cubic-bezier(1,-0.06,1,.77); }
+  main .art.active .artimg h4 {animation-delay: 5s; animation: imgFade 4s 1 cubic-bezier(1,-0.06,1,.77); }
+  main .art.active .artimg p{animation-delay: 5s; animation: imgFade 4s 1 cubic-bezier(1,-0.06,1,.77); }
+
 
 /* main .art2 {width:100%; height:100vh;}
 main .art2 .container {width: 100%; position: relative;}
@@ -163,10 +173,6 @@ footer p.dark {color:#101010;}
 .none {display: none;}
 .resize { width:100%; height:100%;}
 
-/* main .art.active .img {width:100%; height:100%;}
-main .art.active h4 {display: block;}
-main .art.active p {display: block;}
-main .art.active .txt {width: 0; height: 0; overflow: hidden;} */
 
 main .art .img.detail {width: 56.77%; height: 52.40%;}
 main .art .img.detail h4 {display: none;}
