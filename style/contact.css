@@ -19,7 +19,7 @@ button:hover {
 a {
     cursor: none;
     text-decoration: none;
-    color: inherit;
+    color:inherit;
 }
 .test_obj {
     position: relative;
@@ -128,7 +128,7 @@ main .txt_box {
 main .txt_box:nth-child(1) {
     margin-right: 9%;
 }
-main .txt_box p {
+main .main_txt .txt_box p {
     display: block;
     font-family: 'EuclidCircularA', sans-serif;
     font-size: 1rem;
@@ -138,7 +138,7 @@ main .txt_box p {
     color: #a5a5a5;
     font-style: normal;
 }
-main .txt_box span {
+main .main_txt .txt_box span {
     font-family: 'PAYW-Pro', sans-serif;
     font-size: 1.25rem;
     font-weight: 500;
@@ -705,6 +705,7 @@ footer .footer_logo > a > span{
     font-weight: 600;
     letter-spacing: -0.02em;
     line-height: 1.4;
+    color:#fff;
 }
 
 footer address {
@@ -742,7 +743,7 @@ footer address > ul > li > a{
 
 /* 메뉴 페이지 */
 .menu_page {width:100%; height:100vh; background-color: #050505; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 999;}
-.menu_page .logo_dark {width: 150px;height: 23px; position: fixed; top: 5.46%; left: 2.60%; z-index: 999; background: url(../main/images/index_img/img_logo_white.svg) no-repeat 0 /contain; text-indent: -9999px;}
+.menu_page .logo_dark {width: 160px;height: 23px; position: fixed; top: 5.46%; left: 2.60%; background: url(./images/index_img/img_logo_white.svg) no-repeat 0 /contain; text-indent: -9999px; z-index: 9999;}
 .menu_page .menu_close {position: absolute; top: 5.46%; right: 2.60%; background-color: #ddff21; padding: 0.375rem; text-align: center;}
 .menu_page .menu{position: absolute; top: 50%; transform: translateY(-50%); left: 16.14%;}
 .menu_page > .menu > li > a {font-size: 7.5rem; font-weight: 600; letter-spacing: -0.01em; line-height: 1.2916666667; color: #fff;}
