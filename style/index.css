@@ -89,9 +89,13 @@ main .frame { /* width: 100%; */ box-sizing: border-box; padding: 380px 0; text-
   0%{width:100%; height:100vh;}
   100%{width:0; height:0;}
 }
-  main .art.active .artimg {animation-delay: 5s; animation: imgFade 4s 1 cubic-bezier(1,-0.06,1,.77); }
-  main .art.active .artimg h4 {animation-delay: 5s; animation: imgFade 4s 1 cubic-bezier(1,-0.06,1,.77); }
-  main .art.active .artimg p{animation-delay: 5s; animation: imgFade 4s 1 cubic-bezier(1,-0.06,1,.77); }
+main .art.active .artimg {animation-delay: 10s; animation: imgFade 1s 1 cubic-bezier(1,-0.06,1,.77); }
+main .art.active .artimg h4 {animation-delay: 10s; animation: txtFade 1s 1 cubic-bezier(1,-0.06,1,.77);}
+main .art.active .artimg p{animation-delay: 10s; animation: txtFade 1s 1 cubic-bezier(1,-0.06,1,.77); }
+main .art.active .artimg {width:0; height:0;}
+main .art.active .artimg h4{display: none;}
+main .art.active .artimg p{display: none;}
+
 
 
 /* main .art2 {width:100%; height:100vh;}
@@ -181,4 +185,37 @@ main .art .img.detail p {display: none;}
 
 /* 마우스 커서 */
 .circle { width: 30px; height: 30px; background-color: #fff; position: absolute; top: 0; left: 0; mix-blend-mode: difference; border-radius: 50%; will-change: transform; transform: translate(-50%, -50%); z-index: 9999;}
-  
+  /* 
+main .art .pointer .img_box li {
+  position: relative;
+  display: inline-block;
+}
+main .art .pointer .img_box li img {
+  max-width: 100%;
+}
+main .art .pointer .img_box li::before, main .art .pointer .img_box li::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 95%;
+  height: 95%;
+  transform: translate(-50%, -50%);
+  transition: all 0.8s;
+}
+main .art .pointer .img_box li::before {
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  width: 0;
+}
+main .art .pointer .img_box li::after {
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+  height: 0;
+}
+main .art .pointer .img_box li:hover::before {
+  width: 95%;
+}
+main .art .pointer .img_box li:hover::after {
+  height: 95%;
+} */
