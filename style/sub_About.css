@@ -1,0 +1,564 @@
+@charset "utf-8";
+
+html,
+body {
+  font-family: "PAYW-Pro", 돋움, sans-serif;
+  cursor: none;
+}
+.eng {
+  font-family: "EuclidCircularA", sans-serif;
+}
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  cursor: none;
+}
+img {
+  display: block;
+}
+
+/* header */
+header .gnb {
+  position: fixed;
+  top: 5.46%;
+  z-index: 99999;
+}
+header h1 .logo {
+  width: 150px;
+  height: 23px;
+  left: 2.6%;
+  text-indent: -9999px;
+  background: url(../images/sub_About_img/img_logo_black.svg) no-repeat 0 /
+    contain;
+}
+header h1 .logo.color {
+  background: url(../images/sub_About_img/img_logo_white.svg) no-repeat 0 /
+    contain;
+}
+header .menu_open {
+  right: 2.6%;
+}
+header .menu_open svg path.color {
+  fill: #fff;
+}
+header .menu_close {
+  right: 2.6%;
+  display: none;
+}
+header .menu_close_active {
+  display: block;
+}
+
+/* main */
+main .container1 .mousewheel_wrap {
+  height: 100vh;
+  position: relative;
+}
+main .container1 .mousewheel_container {
+  background: url(../images/sub_About_img/img_about_member.png) no-repeat center /
+    cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: clip-path 0.7s;
+  background-color: #000;
+  clip-path: inset(22.037% 45.7292%);
+  z-index: 1;
+}
+main .container1 .mousewheel_container:hover {
+  clip-path: inset(0%);
+}
+main .container1 .mousewheel_container span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 4.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #fff;
+  transform: translate(-50%, -50%);
+  letter-spacing: -0.02em;
+}
+main .container1 .mousewheel_wrap .text_container {
+  position: fixed;
+  top: 50.2%;
+  left: 50%;
+  font-size: 4.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #101010;
+  transform: translate(-50%, -50%);
+  letter-spacing: -0.02em;
+}
+
+main .container2 {
+  position: relative;
+  background-color: #101010;
+  width: 100%;
+  overflow-x: hidden;
+  height: 100%;
+  outline: 0;
+  z-index: 9999;
+}
+main .container2 .text_container {
+  padding-top: 14%;
+  position: relative;
+  overflow: hidden;
+}
+main .container2 .text_container span {
+  position: relative;
+  font-size: 3.8125rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #fff;
+  line-height: 1.65;
+  display: inline-block;
+}
+main .container2 .text_container .arrow {
+  position: relative;
+  left: 15%;
+}
+@keyframes movLeft {
+  from {
+    left: -500px;
+    opacity: 0;
+  }
+  to {
+    left: 14%;
+    opacity: 1;
+  }
+}
+@keyframes movRight {
+  from {
+    right: -500px;
+    opacity: 0;
+  }
+  to {
+    right: 10%;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+main .container2 .img_bg {
+  position: absolute;
+  right: 0;
+  top: 7%;
+}
+main .container2 .specialities_wrap {
+  position: relative;
+  margin-top: 21rem;
+  width: 47%;
+  float: right;
+  padding-left: 4.6%;
+  color: #fff;
+  transition: 0.5s;
+}
+main .container2 .specialities_wrap::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  left: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+main .container2 .specialities_wrap span {
+  position: absolute;
+  left: -10px;
+  transition: transform 3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+@keyframes move {
+  0% {
+    transform: rotate(360deg);
+    opacity: 1;
+    top: 5%;
+  }
+  10% {
+    transform: rotate(-360deg);
+    opacity: 0.8;
+    top: 10%;
+  }
+  /* 30% {
+    transform: rotate(360deg);
+    opacity: 0.6;
+    top: 40%;
+  } */
+  /* 60% {
+    transform: rotate(-360deg);
+    opacity: 0.4;
+    top: 55%;
+  } */
+  80% {
+    transform: rotate(360deg);
+    opacity: 0.2;
+    top: 80%;
+  }
+  100% {
+    transform: rotate(-360deg);
+    opacity: 0.1;
+    top: 90%;
+  }
+}
+@keyframes active {
+  30% {
+    opacity: 1;
+  }
+  150% {
+    opacity: 1;
+  }
+  180% {
+    opacity: 1;
+  }
+}
+main .container2 .specialities_wrap h6 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+}
+main .container2 .specialities_wrap ul {
+  margin-top: 4.375rem;
+}
+main .container2 .specialities_wrap ul > li {
+  opacity: 0.3;
+  margin-top: 7.5rem;
+}
+main .container2 .specialities_wrap ul > li > strong {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+}
+main .container2 .specialities_wrap ul > li > p {
+  font-size: 1.125rem;
+  letter-spacing: -0.02em;
+  line-height: 1.5;
+  margin-top: 2rem;
+}
+main .container2 .specialities_wrap ul > li.active {
+  opacity: 1;
+}
+main .container2 #clients_wrap {
+  padding: 15% 25%;
+  clear: both;
+}
+main .container2 #clients_wrap ul {
+  display: flex;
+  flex-wrap: wrap;
+  opacity: 0;
+}
+main .container2 #clients_wrap ul li {
+  width: 25%;
+  height: 8.75rem;
+  text-align: center;
+  transform: translate(0px, 5px);
+  /* transition: transform 0.3s, opacity 0.3s; */
+}
+main .container2 #clients_wrap ul li img {
+  vertical-align: middle;
+}
+
+main .container3 {
+  background-color: #fff;
+  /* transition: background-color 0.25s; */
+  height: 937px;
+  position: relative;
+  display: block;
+  z-index: 9999;
+}
+main .container3 .img_wrap {
+  position: absolute;
+  width: 67%;
+  min-width: 1000px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main .container3 .img_wrap p {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 6%;
+  width: 84%;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #fff;
+  white-space: nowrap;
+}
+
+main .container4 {
+  /* overflow-y: hidden; */
+  height: 100%;
+  outline: 0;
+  position: relative;
+  display: block;
+}
+main .container4 .contact {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+main .container4 .contact .line {
+  display: block;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+  /* transition: width 5s, height 5s; */
+}
+
+main .container4 .contact .line.line01 {
+  width: 100%;
+  height: 1px;
+  top: 50%;
+  left: 0;
+  opacity: 0;
+}
+
+main .container4 .contact .line.line02 {
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  opacity: 0;
+}
+main .container4 .contact .line.line03 {
+  width: 1px;
+  height: 200%;
+  transform: rotate(135deg);
+  left: 50%;
+  top: -50%;
+  opacity: 0;
+}
+main .container4 .contact .line.line04 {
+  width: 1px;
+  height: 200%;
+  transform: rotate(-135deg);
+  left: 50%;
+  top: -50%;
+  opacity: 0;
+}
+main .container4 .contact p {
+  position: absolute;
+  z-index: 1;
+  font-size: 4.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  color: #dbdbdb;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 40%;
+  opacity: 0;
+}
+main .container4 .contact p.show {
+  animation: fadeIn 0.5s 0.8s forwards;
+}
+main .container4 .contact p a {
+  color: #101010;
+}
+
+/* toggle menu */
+main .menu_wrap {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #050505;
+  z-index: 99999;
+}
+main .menu_wrap.none {
+  display: none;
+}
+main .menu_wrap.on {
+  display: block;
+}
+main .menu_wrap .gnb {
+  width: 10rem;
+  left: 2.6%;
+  position: fixed;
+  top: 5%;
+  z-index: 10;
+}
+main .menu_wrap .gnb a {
+  display: block;
+  width: 100%;
+}
+main .menu_wrap .gnb a img {
+  display: block;
+  width: 100%;
+}
+main .menu_wrap .menu_close {
+  position: absolute;
+  top: 5%;
+  right: 2%;
+  background-color: #ddff21;
+  padding: 0.375rem;
+  text-align: center;
+}
+main .menu_wrap .menu_close img {
+  vertical-align: middle;
+}
+main .menu_wrap .menu_list {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 16%;
+}
+main .menu_wrap .menu_list li a {
+  font-size: 7.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.29;
+  color: #fff;
+}
+main .menu_wrap .menu_list li a:hover {
+  color: #ddff21;
+}
+main .menu_wrap .menu_list li ~ li {
+  margin-top: 2rem;
+}
+main .menu_wrap .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 3.125rem 3.125rem;
+  z-index: 10;
+  display: block;
+  background-color: #000;
+}
+main .menu_wrap .footer .footer_wrap {
+  color: #fff;
+  position: relative;
+  width: fit-content;
+  height: 100%;
+}
+main .menu_wrap .footer .footer_wrap .family_list li {
+  float: left;
+}
+main .menu_wrap .footer .footer_wrap .family_list li a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.26;
+  margin-left: 0.75rem;
+}
+main .menu_wrap .footer .footer_wrap p {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.26;
+  white-space: nowrap;
+  margin-top: 0.75rem;
+}
+main .menu_wrap .footer .footer_wrap .contact {
+  background-color: rgba(255, 255, 255, 0.08);
+  position: absolute;
+  display: block;
+  right: -1.8125rem;
+  top: 50%;
+  transform: translate(100%, -50%);
+  padding: 1.0625rem 1rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* footer */
+footer {
+  padding: 3.3333% 10.7291% 12.1875%;
+  background-color: #101010;
+  display: block;
+  /* z-index: 10; */
+}
+footer .company_name {
+  float: left;
+}
+footer .company_name a {
+  display: flex;
+  align-items: center;
+}
+footer .company_name a span {
+  position: relative;
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  color: #fff;
+}
+footer .company_name:hover a span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transition: 0.3s ease;
+}
+footer .company_name a img {
+  padding-left: 10px;
+}
+footer .company_name:hover a img {
+  transition: transform 0.5s;
+  transform: rotate(-45deg);
+  margin-left: 1.0625rem;
+}
+footer address {
+  float: right;
+}
+footer address ul {
+  display: flex;
+  gap: 3.75rem;
+}
+footer address ul li {
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.5;
+  color: #fff;
+  font-style: normal;
+}
+
+/* 마우스 커서 */
+.circle {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  mix-blend-mode: difference;
+  border-radius: 50%;
+  will-change: transform;
+  transform: translate(-50%, -50%);
+  z-index: 99999999;
+}
