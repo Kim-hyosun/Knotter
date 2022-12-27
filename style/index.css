@@ -77,21 +77,21 @@ main .art1 .txt h6 {margin-top: 1rem; text-align: right; font-size: 1.5rem; font
 main .frame { /* width: 100%; */ box-sizing: border-box; padding: 380px 0; text-align: center; color: #101010; transform-origin: center; font-size: 2.8rem; font-weight: 600; letter-spacing: -0.02em; line-height: 1.5; text-align: center;}
 .container .art2 .txt1 {  font-size: 7.5em;  font-family: 'EuclidCircularA', sans-serif;  font-weight: bold;  color: #000;}
 
-  @keyframes svgFade {
+/*  @keyframes svgFade {
     0% {transform: scale(10) translateY(100px);}
     50% {transform: scale(5) translateY(50px);}
     100% {transform: scale(1) translateY(0);}
   }
-  main .container .art2 .txt1 svg {animation: svgFade 4s 1;}
+  main .container .art2 .txt1 svg {animation: svgFade 4s 1;}*/
 
-@keyframes imgFade {
+/*@keyframes imgFade {
 
   0%{width:100%; height:100vh;}
   100%{width:0; height:0;}
 }
 main .art.active .artimg {animation-delay: 10s; animation: imgFade 1s 1 cubic-bezier(1,-0.06,1,.77); }
 main .art.active .artimg h4 {animation-delay: 10s; animation: txtFade 1s 1 cubic-bezier(1,-0.06,1,.77);}
-main .art.active .artimg p{animation-delay: 10s; animation: txtFade 1s 1 cubic-bezier(1,-0.06,1,.77); }
+main .art.active .artimg p{animation-delay: 10s; animation: txtFade 1s 1 cubic-bezier(1,-0.06,1,.77); }*/
 main .art.active .artimg {width:0; height:0;}
 main .art.active .artimg h4{display: none;}
 main .art.active .artimg p{display: none;}
